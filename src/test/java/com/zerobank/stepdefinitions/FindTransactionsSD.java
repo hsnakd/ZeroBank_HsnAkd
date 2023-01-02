@@ -63,20 +63,20 @@ public class FindTransactionsSD {
 
 
         int cellFromDate = Integer.parseInt(fromDate.replace("-", ""));
-        System.out.println("cellFromDate = " + cellFromDate);
+//        System.out.println("cellFromDate = " + cellFromDate);
 
         int cellToDate = Integer.parseInt(toDate.replace("-", ""));
-        System.out.println("cellToDate = " + cellToDate);
+//        System.out.println("cellToDate = " + cellToDate);
 
 //        int cellNotContainDate = Integer.parseInt(notContainDate.replace("-", ""));
         int cellNotContainDate = 20120901;
-        System.out.println("cellNotContainDate = " + cellNotContainDate);
+//        System.out.println("cellNotContainDate = " + cellNotContainDate);
 
         int cellDate1 = Integer.parseInt(listOfInfo1.replace("-", ""));
-        System.out.println("cellDate1 = " + cellDate1);
+//        System.out.println("cellDate1 = " + cellDate1);
 
         int cellDate2 = Integer.parseInt(listOfInfo2.replace("-", ""));
-        System.out.println("cellDate2 = " + cellDate2);
+//        System.out.println("cellDate2 = " + cellDate2);
 
         assertTrue((cellNotContainDate != cellDate1 && cellNotContainDate != cellDate2));
 

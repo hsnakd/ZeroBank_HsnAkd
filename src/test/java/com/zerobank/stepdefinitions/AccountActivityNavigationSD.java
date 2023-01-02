@@ -72,8 +72,8 @@ public class AccountActivityNavigationSD {
 
 
         List<String> actualResults = BrowserUtils.getElementsText(selectObj.getOptions());
-        System.out.println("expectedResults = " + expectedResults);
-        System.out.println("actualResults = " + actualResults);
+//        System.out.println("expectedResults = " + expectedResults);
+//        System.out.println("actualResults = " + actualResults);
 
         assertTrue(actualResults.containsAll(expectedResults));
     }
