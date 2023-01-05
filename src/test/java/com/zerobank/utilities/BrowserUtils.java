@@ -597,7 +597,13 @@ for given duration
         newPayeePages.payeeAddress.sendKeys(payeeAddress);
         newPayeePages.payeeAccount.sendKeys(payeeAccount);
         newPayeePages.payeeDetails.sendKeys(payeeDetails);
+    }
 
+    public static void addInfoWithEmptyField(String payeeAddress, String payeeAccount, String payeeDetails){
+        AddNewPayeePages newPayeePages = new AddNewPayeePages();
 
+        newPayeePages.payeeAddress.sendKeys(payeeAddress);
+        newPayeePages.payeeAccount.sendKeys(payeeAccount);
+        newPayeePages.payeeDetails.sendKeys(payeeDetails);
     }
 }
