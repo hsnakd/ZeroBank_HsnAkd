@@ -16,7 +16,7 @@
         | Payee Address | 100 Same st, Anytown, USA, 10001         |
         | Account       | Checking                                 |
         | Payee details | XYZ account                              |
-      Then message "<message>" should be displayed
+      Then validation "<message>" should be displayed
     Examples:
       | message |
       | The new payee The Law Offices of Hyde, Price & Scharks was successfully created. |
@@ -28,7 +28,7 @@
         | Payee Address | 100 Same st, Anytown, USA, 10001 |
         | Account       | Checking                         |
         | Payee details | XYZ account                      |
-  Then message "<message>" should be displayed
+  Then error "<message>" should be displayed
   Examples:
     | message |
     | Please fill out this field. |

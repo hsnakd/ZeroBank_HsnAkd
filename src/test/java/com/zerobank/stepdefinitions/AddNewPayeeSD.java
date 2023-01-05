@@ -14,7 +14,6 @@ public class AddNewPayeeSD {
 
     @And("creates new payee using following information")
     public void createsNewPayeeUsingFollowingInformation(Map<String, String> credentials) {
-
         BrowserUtils.addInfo(credentials.get("Payee Name"), credentials.get("Payee Address"),credentials.get("Account"),credentials.get("Payee details"));
         newPayeePages.addButton.click();
     }
@@ -25,8 +24,14 @@ public class AddNewPayeeSD {
         newPayeePages.addButton.click();
 
     }
-    @Then("message {string} should be displayed")
-    public void messageShouldBeDisplayed(String expectedMessage) {
+    @Then("validation {string} should be displayed")
+    public void validationShouldBeDisplayed(String expectedMessage) {
+        String actualMessage = newPayeePages.message.getText();
+        assertEquals(expectedMessage, actualMessage);
+    }
+
+    @Then("error {string} should be displayed")
+    public void errorShouldBeDisplayed(String expectedMessage) {
         String actualMessage = newPayeePages.payeeName.getAttribute("validationMessage");
 //        System.out.println("expectedMessage = " + expectedMessage);
 //        System.out.println("actualMessage = " + actualMessage);
@@ -34,5 +39,4 @@ public class AddNewPayeeSD {
 //        System.out.println("size = " + size);
         assertEquals(expectedMessage, actualMessage);
     }
-
 }

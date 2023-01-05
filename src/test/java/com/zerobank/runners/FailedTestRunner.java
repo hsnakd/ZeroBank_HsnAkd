@@ -7,6 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "pretty",
+        },
         features = "@target/rerun.txt",
         glue = "com/zerobank/stepdefinitions"
 
