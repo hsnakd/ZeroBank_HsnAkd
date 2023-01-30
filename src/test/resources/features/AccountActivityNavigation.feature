@@ -1,4 +1,4 @@
-@AccountActivityNavigation
+@AccountActivityNavigation @smoke
 Feature: Navigating to specific accounts in Accounts Activity
 
   @AccountActivityNavigation1

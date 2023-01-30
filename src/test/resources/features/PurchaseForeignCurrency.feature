@@ -1,4 +1,4 @@
-@PurchaseForeignCurrency
+@PurchaseForeignCurrency @smoke
   Feature: Purchase Foreign Currency
 
     Background:
