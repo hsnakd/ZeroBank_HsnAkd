@@ -25,8 +25,8 @@ public class PurchaseForeignCurrencySD {
 //        selectObj.selectByVisibleText("Savings");
 
         List<String> actualResults = BrowserUtils.getElementsText(selectObj.getOptions());
-//        System.out.println("expectedResults = " + expectedResults);
-//        System.out.println("actualResults = " + actualResults);
+        System.out.println("expectedResults = " + expectedResults);
+        System.out.println("actualResults = " + actualResults);
 
         assertTrue(actualResults.containsAll(expectedResults));
 
