@@ -16,6 +16,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -191,10 +192,11 @@ public class Driver {
                     if (System.getProperty("os.name").toLowerCase().contains("windows")) {
                         throw new WebDriverException("Your operating system does not support the SAFARI browser");
                     }
-                    WebDriverManager.safaridriver().setup();
+//                    WebDriverManager.safaridriver().setup();            // After Selenium 4 we don't need this line anymore
                     driverPool.set(new SafariDriver());
                     driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
 
                 case "ie":
