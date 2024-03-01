@@ -1,6 +1,5 @@
 @Shutdown_Restart
-Feature: Navigating to specific accounts in Accounts Activity
-
+Feature: Mac Control with Timer
   @Shutdown
   Scenario: Shutdown
     Given Shutdown
@@ -8,3 +7,17 @@ Feature: Navigating to specific accounts in Accounts Activity
   @Restart
   Scenario: Restart
     Given  Restart
+
+  @ShutdownTimer
+  Scenario: ShutdownTimer
+    Given ShutdownTimer 10 seconds
+
+  @RestartTimer
+  Scenario: RestartTimer
+    Given  RestartTimer 100 seconds
+
+
+
+
+
+
